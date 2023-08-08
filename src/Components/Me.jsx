@@ -1,11 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import me from "../assets/me.png";
-import EngCV from "../assets/ENG Martin Costa D'Addato React Developer.pdf";
+import EngCV from "../assets/ENG Martin Costa D'addato React Developer.pdf";
 import EspCV from "../assets/ESP Martin Costa D'Addato Desarrollador React.pdf";
 
 function Me() {
-  const [isCvOpen, setIsCvOpen] = useState(true);
+  const [isCvOpen, setIsCvOpen] = useState(false);
 
   return (
     <motion.div className="w-full h-full flex flex-col md:flex-row overflow-hidden">
