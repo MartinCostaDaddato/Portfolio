@@ -95,7 +95,7 @@ function ContactUs() {
           className="bg-white text-black text-center font-semibold p-7 rounded-lg shadow-white lg:w-1/2 lg:self-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration:1 }}
+          transition={{ duration: 1 }}
         >
           <p>Email sent successfully!</p>
         </motion.div>
@@ -108,7 +108,7 @@ function ContactUs() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 1 }}
-            exit={{opacity:0, transition:{duration:1}}}
+            exit={{ opacity: 0, transition: { duration: 1 } }}
           />
         </AnimatePresence>
       )}
