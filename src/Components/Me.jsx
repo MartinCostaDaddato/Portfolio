@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import me from "../assets/me.png";
-import EngCV from "../assets/ENG Martin Costa D'addato React Developer.pdf";
-import EspCV from "../assets/ESP Martin Costa D'addato Desarrollador React.pdf";
+import EngCV from "../assets/ENG Martin Costa Daddato React Developer.pdf";
+import EspCV from "../assets/ESP Martin Costa Daddato Desarrollador React.pdf";
 
 function Me() {
   const [isCvOpen, setIsCvOpen] = useState(false);
