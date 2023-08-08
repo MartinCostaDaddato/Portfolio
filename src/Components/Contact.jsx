@@ -1,18 +1,32 @@
-import { useRef } from "react";
-import { motion } from "framer-motion";
-import emailjs from '@emailjs/browser';
+import { useRef, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import emailjs from "@emailjs/browser";
 function ContactUs() {
   const form = useRef();
+
+  const [mailSended, setmailSended] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_70fkdva', 'template_th00hij', form.current, 'mn7IpkFnUa2NBoAPy')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_70fkdva",
+        "template_th00hij",
+        form.current,
+        "mn7IpkFnUa2NBoAPy"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+          if (result.text === "OK") {
+            setmailSended(true);
+          }
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
   };
 
   return (
@@ -33,7 +47,7 @@ function ContactUs() {
         className="mb-2"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay:.1 }}
+        transition={{ duration: 1, delay: 0.1 }}
       >
         Name
       </motion.label>
@@ -43,13 +57,13 @@ function ContactUs() {
         className=" p-4 bg-emerald-50 text-black rounded-lg outline-none focus:outline-emerald-500 focus:outline-2 mb-5 required:"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay:.2 }}
+        transition={{ duration: 1, delay: 0.2 }}
       />
       <motion.label
         className="mb-2"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay:.3 }}
+        transition={{ duration: 1, delay: 0.3 }}
       >
         Email
       </motion.label>
@@ -59,13 +73,13 @@ function ContactUs() {
         className="p-4 bg-emerald-50 text-black rounded-lg outline-none focus:outline-emerald-500 focus:outline-2 mb-5"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay:.4 }}
+        transition={{ duration: 1, delay: 0.4 }}
       />
       <motion.label
         className="mb-2"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay:.5 }}
+        transition={{ duration: 1, delay: 0.5 }}
       >
         Message
       </motion.label>
@@ -74,16 +88,30 @@ function ContactUs() {
         className="p-4 bg-emerald-50 text-black rounded-lg outline-none focus:outline-emerald-500 focus:outline-2 mb-12 h-[40%]"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay:.6 }}
+        transition={{ duration: 1, delay: 0.6 }}
       />
-      <motion.input
-        type="submit"
-        value="Send"
-        className=" bg-emerald-500 text-black font-semibold p-5 rounded-lg active:bg-white active:text-emerald-500 shadow-white lg:w-1/2 lg:self-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1}}
-        transition={{ duration: 2, delay:1 }}
-      />
+      {mailSended ? (
+        <motion.div
+          className="bg-white text-black text-center font-semibold p-7 rounded-lg shadow-white lg:w-1/2 lg:self-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration:1 }}
+        >
+          <p>Email sent successfully!</p>
+        </motion.div>
+      ) : (
+        <AnimatePresence>
+          <motion.input
+            type="submit"
+            value="Send"
+            className=" bg-emerald-500 text-black font-semibold p-7 rounded-lg hover:bg-emerald-600 hover:text-white active:bg-white active:text-emerald-500 shadow-white lg:w-1/2 lg:self-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, delay: 1 }}
+            exit={{opacity:0, transition:{duration:1}}}
+          />
+        </AnimatePresence>
+      )}
     </form>
   );
 }
