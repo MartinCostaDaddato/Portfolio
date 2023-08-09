@@ -40,7 +40,7 @@ function Me() {
             Download CV
           </motion.p>
           {isCvOpen ? (
-            <div className="absolute justify-start items-start flex flex-col mt-8 gap-8 text-white">
+            <div className="absolute justify-start items-start flex flex-col mt-6 md:mt-8 gap-6 md:gap-8 text-white">
               <AnimatePresence>
                 <motion.a
                   href={EngCV}
@@ -71,7 +71,7 @@ function Me() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring", duration: 2 }}
         initial={{ opacity: 0, scale: 0 }}
-        className="w-full flex justify-center mb-24 md:mb-0"
+        className="w-full flex justify-center mb-4 mt-20 md:m-0"
       >
         <img src={me} alt="yo" className="w-72 md:w-[30rem] object-contain" />
       </motion.div>
