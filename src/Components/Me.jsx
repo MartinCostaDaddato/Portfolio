@@ -18,12 +18,11 @@ function Me() {
         <h1 className="text-white text-center md:text-start text-3xl md:text-4xl w-full ">
           Hi! My name is Martin Costa Daddato
         </h1>
-        <h2 className=" w-5/6 opacity-50 text-md text-justify md:text-lg">
-          React Developer base on Mar del Plata, Buenos Aires, Argentina. <br />
-          <br />I am a passionate, course-trained and self-taught React
-          developer. <br />
-          <br /> My perfectionist approach drives me to optimize and get things
-          done right and fast. <br /> Always excited to learn and face new
+        <h2 className=" w-5/6 opacity-50 text-md text-justify md:text-lg ">
+          React Developer base on Mar del Plata, Buenos Aires, Argentina. <br /><br />
+          I am a passionate, course-trained and self-taught React developer. <br />
+          My perfectionist approach drives me to optimize and get things
+          done right and fast. <br /> <br />Always excited to learn and face new
           challenges in technology.
         </h2>
         <motion.button className="mt-8 relative " layout>
