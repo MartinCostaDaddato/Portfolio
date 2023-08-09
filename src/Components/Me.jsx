@@ -30,6 +30,9 @@ function Me() {
           <motion.p
             layout
             className="underline underline-offset-8 text-emerald-500 hover:text-cyan-700"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
             onClick={() => {
               setIsCvOpen(!isCvOpen);
             }}
