@@ -97,27 +97,26 @@ function ContactUs() {
         <motion.input
           type="submit"
           value="Send"
-          className=" bg-emerald-500 text-black font-semibold p-7 rounded-lg hover:bg-emerald-600 hover:text-white active:bg-white active:text-emerald-500 shadow-white lg:w-1/2 lg:self-center"
+          className=" bg-emerald-500 text-black font-semibold p-7 rounded-lg hover:bg-emerald-600 hover:text-white  lg:w-1/2 lg:self-center"
           initial={{ opacity: 0, x:-100 }}
           animate={{ opacity: 1, x:0 }}
           transition={{ duration: 1, delay: 0.7 }}
-          exit={{ opacity: 0, transition: { duration: 1 } }}
         />
       ) : null}
 
       {loading && !mailSended ? (
-        <motion.p
-          animate={{ y: 0, opacity: 1 }}
-          initial={{ opacity: 0, y: -20 }}
-          transition={{ duration: 1, type: "spring" }}
-          className="bg-white bg-opacity-50 text-black text-center font-semibold p-7 rounded-lg shadow-white lg:w-1/2 lg:self-center"
+        <motion.p 
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0.1 }}
+        transition={{ duration: 1 }}
+          className="bg-white bg-opacity-50 text-black text-center font-semibold p-7 rounded-lg lg:w-1/2 lg:self-center"
         >
           Enviando...
         </motion.p>
       ) : null}
 
       {mailSended ? (
-        <motion.div className="bg-white text-black text-center font-semibold p-7 rounded-lg shadow-white lg:w-1/2 lg:self-center">
+        <motion.div className="bg-white text-black text-center font-semibold p-7 rounded-lg lg:w-1/2 lg:self-center">
           <motion.p
             animate={{ y: 0, opacity: 1 }}
             initial={{ opacity: 0, y: -20 }}
