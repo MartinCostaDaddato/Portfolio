@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="m-0 p-0 flex flex-col justify-center w-full h-screen font-manrope text-white">
-        <Navbar />
+        <Navbar/>
         <div className="container mx-auto  h-full flex flex-col items-center">
           <Routes location={location} key={location.pathname}>
             <Route index  element={<Me />} />
