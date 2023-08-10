@@ -60,6 +60,7 @@ function ContactUs() {
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
+        required
       />
       <motion.label
         className="mb-2"
@@ -76,6 +77,7 @@ function ContactUs() {
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.4 }}
+        required
       />
       <motion.label
         className="mb-2"
@@ -91,6 +93,7 @@ function ContactUs() {
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
+        required
       />
 
       {!loading ? (
@@ -101,6 +104,7 @@ function ContactUs() {
           initial={{ opacity: 0, x:-100 }}
           animate={{ opacity: 1, x:0 }}
           transition={{ duration: 1, delay: 0.7 }}
+          
         />
       ) : null}
 
