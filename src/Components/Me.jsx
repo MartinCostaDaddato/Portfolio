@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { useState } from "react";
 import me from "../assets/me.png";
 import EngCV from "../assets/ENG Martin Costa Daddato React Developer.pdf";
@@ -19,52 +20,77 @@ function Me() {
           Hi! My name is Martin Costa Daddato
         </h1>
         <h2 className=" w-5/6 opacity-50 text-md text-justify md:text-lg ">
-          React Developer base on Mar del Plata, Buenos Aires, Argentina. <br /><br />
-          I am a passionate, course-trained and self-taught React developer. <br />
-          My perfectionist approach drives me to optimize and get things
-          done right and fast. <br /> <br />Always excited to learn and face new
-          challenges in technology.
+          React Developer base on Mar del Plata, Buenos Aires, Argentina. <br />
+          <br />I am a passionate, course-trained and self-taught React
+          developer. <br />
+          My perfectionist approach drives me to optimize and get things done
+          right and fast. <br /> <br />
+          Always excited to learn and face new challenges in technology.
         </h2>
-        <motion.button className="mt-8 relative " layout>
-          <motion.p
-            layout
-            className="underline underline-offset-8 text-emerald-500 hover:text-cyan-700"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-            onClick={() => {
-              setIsCvOpen(!isCvOpen);
-            }}
+        <div className="w-5/6 justify-between mt-8 flex flex-row items-center">
+          <motion.button className=" relative " layout>
+            <motion.p
+              layout="position"
+              className=" underline underline-offset-8 text-emerald-500 hover:text-cyan-700 leading-7"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: "spring", delay: 1 }}
+              onClick={() => {
+                setIsCvOpen(!isCvOpen);
+              }}
+            >
+              Download CV
+            </motion.p>
+
+            {isCvOpen ? (
+              <div className="absolute justify-start items-start flex flex-col mt-6 md:mt-8 gap-6 md:gap-8 text-white">
+                <AnimatePresence>
+                  <motion.a
+                    href={EngCV}
+                    download="ENG CV Martin Costa D'addato"
+                    className="hover:underline underline-offset-8"
+                    initial={{ y: -20 }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 0.5, type: "spring" }}
+                  >
+                    English CV{" "}
+                  </motion.a>
+                  <motion.a
+                    href={EspCV}
+                    download="ESP CV Martin Costa D'addato"
+                    className="hover:underline underline-offset-8"
+                    initial={{ y: -40 }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 0.5, type: "spring" }}
+                  >
+                    Spanish CV
+                  </motion.a>
+                </AnimatePresence>
+              </div>
+            ) : null}
+          </motion.button>
+          <motion.div
+            className="flex items-center gap-14 text-emerald-500"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, type: "spring", delay: 1 }}
           >
-            Download CV
-          </motion.p>
-          {isCvOpen ? (
-            <div className="absolute justify-start items-start flex flex-col mt-6 md:mt-8 gap-6 md:gap-8 text-white">
-              <AnimatePresence>
-                <motion.a
-                  href={EngCV}
-                  download="ENG CV Martin Costa D'addato"
-                  className="hover:underline underline-offset-8"
-                  initial={{ y: -20 }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 0.5, type: "spring" }}
-                >
-                  English CV{" "}
-                </motion.a>
-                <motion.a
-                  href={EspCV}
-                  download="ESP CV Martin Costa D'addato"
-                  className="hover:underline underline-offset-8"
-                  initial={{ y: -40 }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 0.5, type: "spring" }}
-                >
-                  Spanish CV
-                </motion.a>
-              </AnimatePresence>
-            </div>
-          ) : null}
-        </motion.button>
+            <a
+              className="hover:opacity-50"
+              href="https://www.linkedin.com/in/martincostadaddato/"
+              target="__BLANK"
+            >
+              <BsLinkedin size={28} />
+            </a>
+            <a
+              className="hover:opacity-50"
+              href="https://github.com/MartinCostaDaddato"
+              target="__BLANK"
+            >
+              <BsGithub size={28} />
+            </a>
+          </motion.div>
+        </div>
       </motion.div>
       <motion.div
         animate={{ opacity: 1, scale: 1 }}

@@ -12,7 +12,7 @@ function Navbar() {
     >
       <Link
         to="/"
-        className="flex flex-col justify-center items-center gap-2 hover:text-cyan-700 text-sm"
+        className="flex flex-col justify-center items-center gap-2 hover:text-cyan-700 text-sm "
       >
         <BiUser size="2rem" color="#26D4A3" />
         About Me
@@ -20,7 +20,7 @@ function Navbar() {
 
       <Link
         to="/Projects"
-        className="flex flex-col justify-center items-center gap-2  hover:text-cyan-700 text-sm"
+        className="flex flex-col justify-center items-center gap-2  hover:text-cyan-700 text-sm "
       >
         <BiTask size="2rem" color="#26D4A3" />
         Projects
@@ -28,7 +28,7 @@ function Navbar() {
 
       <Link
         to="Studies"
-        className="flex flex-col justify-center items-center gap-2 hover:text-cyan-700 text-sm"
+        className="flex flex-col justify-center items-center gap-2 hover:text-cyan-700 text-sm "
       >
         <BiBookBookmark size="2rem" color="#26D4A3" />
         Studies
@@ -36,7 +36,7 @@ function Navbar() {
 
       <Link
         to="Contact"
-        className="flex flex-col justify-center items-center gap-2 hover:text-cyan-700 text-sm"
+        className="flex flex-col justify-center items-center gap-2 hover:text-cyan-700 text-sm "
       >
         <BiMailSend size="2rem" color="#26D4A3" />
         Contact

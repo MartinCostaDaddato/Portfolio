@@ -1,13 +1,15 @@
 import { useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 function ContactUs() {
   const form = useRef();
 
   const [mailSended, setmailSended] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -90,28 +92,41 @@ function ContactUs() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
       />
-      {mailSended ? (
-        <motion.div
-          className="bg-white text-black text-center font-semibold p-7 rounded-lg shadow-white lg:w-1/2 lg:self-center"
+
+      {!loading ? (
+        <motion.input
+          type="submit"
+          value="Send"
+          className=" bg-emerald-500 text-black font-semibold p-7 rounded-lg hover:bg-emerald-600 hover:text-white active:bg-white active:text-emerald-500 shadow-white lg:w-1/2 lg:self-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 2, delay: 1 }}
+          exit={{ opacity: 0, transition: { duration: 1 } }}
+        />
+      ) : null}
+
+      {loading && !mailSended ? (
+        <motion.p
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ opacity: 0, y: -20 }}
+          transition={{ duration: 1, type: "spring" }}
+          className="bg-white bg-opacity-50 text-black text-center font-semibold p-7 rounded-lg shadow-white lg:w-1/2 lg:self-center"
         >
-          <p>Email sent successfully!</p>
+          Enviando...
+        </motion.p>
+      ) : null}
+
+      {mailSended ? (
+        <motion.div className="bg-white text-black text-center font-semibold p-7 rounded-lg shadow-white lg:w-1/2 lg:self-center">
+          <motion.p
+            animate={{ y: 0, opacity: 1 }}
+            initial={{ opacity: 0, y: -20 }}
+            transition={{ duration: 1, type: "spring" }}
+          >
+            Email sent successfully!
+          </motion.p>
         </motion.div>
-      ) : (
-        <AnimatePresence>
-          <motion.input
-            type="submit"
-            value="Send"
-            className=" bg-emerald-500 text-black font-semibold p-7 rounded-lg hover:bg-emerald-600 hover:text-white active:bg-white active:text-emerald-500 shadow-white lg:w-1/2 lg:self-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2, delay: 1 }}
-            exit={{ opacity: 0, transition: { duration: 1 } }}
-          />
-        </AnimatePresence>
-      )}
+      ) : null}
     </form>
   );
 }
