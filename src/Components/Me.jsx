@@ -9,22 +9,22 @@ function Me() {
   const [isCvOpen, setIsCvOpen] = useState(false);
 
   return (
-    <motion.div className="w-full h-full flex flex-col md:flex-row overflow-hidden">
+    <motion.div className="w-full h-full flex flex-col md:flex-row justify-center items-center overflow-hidden">
       <motion.div
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1.5, type: "spring" }}
         initial={{ x: -200, opacity: 0 }}
-        className="w-full h-full md:p-8 flex justify-center items-center md:items-start  flex-col font-bold"
+        className="w-full h-fit md:p-8 flex justify-center items-center md:items-start mt-8 md:mt-0 flex-col font-medium"
       >
-        <h1 className="w-5/6 md:w-full text-white -mt-24 md:-mt-0 text-center md:text-start text-2xl p-3 md:text-4xl  ">
-          Hi! My name is Martin Costa Daddato
+        <h1 className="w-5/6 md:w-full text-white -mt-24  md:-mt-0 text-center md:text-start mb-8 sm:mb-4 text-2xl  md:text-4xl">
+          <p className="opacity-80 mt-4 mb-4">Hi! My name is</p> <b className="opacity-100">Martin Costa Daddato</b>
         </h1>
-        <h2 className=" w-5/6 opacity-50 text-md text-justify text-sm md:text-lg ">
+        <h2 className=" w-5/6 opacity-50 text-md text-justify text-sm md:text-lg tracking-tight">
           React Developer base on Mar del Plata, Buenos Aires, Argentina. <br />
-          <br />I am a passionate, course-trained and self-taught React
-          developer. <br />
+          I am a passionate, course-trained and self-taught React developer.{" "}
+          <br />
           My perfectionist approach drives me to optimize and get things done
-          right and fast. <br /> <br />
+          right and fast. <br />
           Always excited to learn and face new challenges in technology.
         </h2>
         <div className="w-5/6 justify-between mt-4 md:mt-8 flex flex-row items-center">
@@ -96,7 +96,7 @@ function Me() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring", duration: 2 }}
         initial={{ opacity: 0, scale: 0 }}
-        className="w-full flex justify-center lg:mt-20 md:m-0"
+        className="w-full flex justify-center mt-10 md:m-0"
       >
         <img src={me} alt="yo" className="w-72 md:w-[30rem] object-contain" />
       </motion.div>

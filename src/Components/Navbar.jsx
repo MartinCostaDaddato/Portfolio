@@ -8,14 +8,14 @@ function Navbar() {
       initial={{ y: -90 }}
       animate={{ y: 0 }}
       transition={{ duration: 1.5 }}
-      className=" border-b border-emerald-500  flex items-center p-3 justify-evenly lg:m-0"
+      className=" border-b border-emerald-500  flex items-center p-8 gap-12 md:p-3 justify-evenly lg:m-0"
     >
       <Link
         to="/"
         className="flex flex-col justify-center items-center gap-2 hover:text-cyan-700 text-sm "
       >
         <BiUser size="2rem" color="#26D4A3" />
-        About Me
+        <p className="hidden sm:inline-block">About Me</p>
       </Link>
 
       <Link
@@ -23,7 +23,7 @@ function Navbar() {
         className="flex flex-col justify-center items-center gap-2  hover:text-cyan-700 text-sm "
       >
         <BiTask size="2rem" color="#26D4A3" />
-        Projects
+        <p className="hidden sm:inline-block">Projects</p>
       </Link>
 
       <Link
@@ -31,7 +31,7 @@ function Navbar() {
         className="flex flex-col justify-center items-center gap-2 hover:text-cyan-700 text-sm "
       >
         <BiBookBookmark size="2rem" color="#26D4A3" />
-        Studies
+        <p className="hidden sm:inline-block">Studies</p>
       </Link>
 
       <Link
@@ -39,7 +39,7 @@ function Navbar() {
         className="flex flex-col justify-center items-center gap-2 hover:text-cyan-700 text-sm "
       >
         <BiMailSend size="2rem" color="#26D4A3" />
-        Contact
+        <p className="hidden sm:inline-block">Contact</p>
       </Link>
     </motion.div>
   );
