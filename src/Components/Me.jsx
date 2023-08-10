@@ -14,9 +14,9 @@ function Me() {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1.5, type: "spring" }}
         initial={{ x: -200, opacity: 0 }}
-        className="w-full md:p-8 flex justify-center items-center md:items-start h-full flex-col font-bold"
+        className="w-full h-full md:p-8 flex justify-center items-center md:items-start  flex-col font-bold"
       >
-        <h1 className="w-5/6 md:w-full text-white -mt-10 md:-mt-0 text-center md:text-start text-2xl p-3 md:text-4xl  ">
+        <h1 className="w-5/6 md:w-full text-white -mt-24 md:-mt-0 text-center md:text-start text-2xl p-3 md:text-4xl  ">
           Hi! My name is Martin Costa Daddato
         </h1>
         <h2 className=" w-5/6 opacity-50 text-md text-justify text-sm md:text-lg ">
@@ -96,7 +96,7 @@ function Me() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring", duration: 2 }}
         initial={{ opacity: 0, scale: 0 }}
-        className="w-full flex justify-center  lg:mt-20 md:m-0"
+        className="w-full flex justify-center lg:mt-20 md:m-0"
       >
         <img src={me} alt="yo" className="w-72 md:w-[30rem] object-contain" />
       </motion.div>

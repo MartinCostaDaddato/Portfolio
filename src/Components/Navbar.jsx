@@ -8,7 +8,7 @@ function Navbar() {
       initial={{ y: -90 }}
       animate={{ y: 0 }}
       transition={{ duration: 1.5 }}
-      className="border-b border-emerald-500  flex items-center p-3 justify-evenly lg:m-0"
+      className=" border-b border-emerald-500  flex items-center p-3 justify-evenly lg:m-0"
     >
       <Link
         to="/"
