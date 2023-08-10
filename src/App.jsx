@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <div className="m-0 p-0 flex flex-col justify-center w-full h-screen font-manrope text-white">
         <Navbar/>
-        <div className="container mx-auto  h-full flex flex-col items-center">
+        <div className="container mx-auto h-full flex-col items-center justify-center">
           <Routes location={location} key={location.pathname}>
             <Route index  element={<Me />} />
             <Route path="/Projects" element={<Projects />} />
