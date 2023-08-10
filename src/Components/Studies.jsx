@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaReact, FaJs, FaHtml5 } from "react-icons/fa6";
+import { FaReact, FaJs, FaHtml5, FaGit, FaGithub } from "react-icons/fa6";
 import {
   BiLogoCss3,
   BiLogoHtml5,
@@ -8,45 +8,62 @@ import {
 } from "react-icons/bi";
 import { FaCss3Alt } from "react-icons/fa6";
 import { BiLogoFirebase } from "react-icons/bi";
+import {PiFramerLogoFill} from "react-icons/pi"
 
 function Studies() {
+  const iconSize = 50;
   const stack = [
     {
-      name: "HTML 5",
-      logo: <BiLogoHtml5 size={72} />,
+      name: "React Js",
+      logo: <FaReact size={iconSize} />,
       delay: 0.5
     },
     {
-      name: "CSS 3",
-      logo: <BiLogoCss3 size={72} />,
+      name: "Tailwind CSS",
+      logo: <BiLogoTailwindCss size={iconSize} />,
       delay: 0.6
     },
     {
-      name: "Javascript",
-      logo: <BiLogoJavascript size={72} />,
-      delay: 0.7
-    },
-    {
-      name: "React Js",
-      logo: <FaReact size={72} />,
-      delay: 0.8
-    },
-    {
-      name: "Tailwind CSS",
-      logo: <BiLogoTailwindCss size={72} />,
-      delay: 0.9
+      name: "Framer Motion",
+      logo: <PiFramerLogoFill size={iconSize}/>,
+      delay: .7
     },
     {
       name: "Firebase",
-      logo: <BiLogoFirebase size={72} />,
+      logo: <BiLogoFirebase size={iconSize} />,
+      delay: .8
+    },
+    {
+      name: "Git",
+      logo: <FaGit size={iconSize}/>,
+      delay: .9
+    },
+    {
+      name: "Github",
+      logo: <FaGithub size={iconSize}/>,
       delay: 1
+    },
+    {
+      name: "HTML 5",
+      logo: <BiLogoHtml5 size={iconSize} />,
+      delay: 1.1
+    },
+    {
+      name: "CSS 3",
+      logo: <BiLogoCss3 size={iconSize} />,
+      delay: 1.2
+    },
+    {
+      name: "Javascript",
+      logo: <BiLogoJavascript size={iconSize} />,
+      delay: 1.3
     },
   ];
   return (
-    <div className="h-full w-full flex flex-col lg:flex-row lg:mt-36 justify-between items-center overflow-hidden">
-      <motion.div className="h-full w-full md:h-full  flex flex-col mt-8 lg:mt-0 items-center ">
+    <div className="h-full w-full flex flex-col md:flex-row md:mt-28 justify-between items-center overflow-hidden">
+      <motion.div className="h-full w-full md:h-full  flex flex-col  items-center mt-4">
         <motion.p
-          className="text-4xl font-bold tracking-wider mb-8"
+          className="lg:text-4xl font-bold tracking-wider lg:mb-12"
           initial={{ opacity: 0, y: -70 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, type: "spring" }}
@@ -54,7 +71,7 @@ function Studies() {
           Education
         </motion.p>
 
-        <motion.div className="flex flex-col">
+        <motion.div className="flex flex-col mt-6 lg:m-0">
           <motion.div
             className="flex flex-col border-l-2 px-4 "
             initial={{ opacity: 0 }}
@@ -62,7 +79,7 @@ function Studies() {
             transition={{ delay: 0.2 }}
           >
             <motion.p
-              className="text-2xl"
+              className=" lg:text-2xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
@@ -120,7 +137,7 @@ function Studies() {
           </motion.div>
 
           <motion.div
-            className="flex flex-col border-l-2 px-4 mt-16"
+            className="flex flex-col border-l-2 px-4 mt-12 lg:mt-24"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9 }}
@@ -185,9 +202,9 @@ function Studies() {
         </motion.div>
       </motion.div>
 
-      <motion.div className="h-full w-full md:h-full flex  justify-start items-center  flex-col">
+      <motion.div className="h-full w-full  flex  justify-start items-center  flex-col">
         <motion.p
-          className="text-4xl font-bold tracking-wider mb-8 mt-8 lg:mt-0"
+          className="text-xl lg:text-4xl font-bold tracking-wider mb-6 lg:mb-14"
           initial={{ opacity: 0, y: -70 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, type: "spring" }}
@@ -195,23 +212,25 @@ function Studies() {
           My Stack
         </motion.p>
         <motion.div
-          className="grid grid-cols-3 gap-12 "
+          className="grid grid-cols-3 gap-4 text-sm lg:text-base md:gap-10 lg:gap-16 "
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1.5, type: "spring" }}
         >
           {stack.map((item) => (
             <motion.div
-              className="flex flex-col items-center font-bold justify-center"
+              className="flex flex-col items-center font-bold justify-center gap-2 lg:gap-4"
               key={item.name}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: item.delay }}
             >
               {item.logo}
-              <motion.p>{item.name}</motion.p>
+              <motion.p className="text-center">{item.name}</motion.p>
             </motion.div>
           ))}
+
+          
         </motion.div>
       </motion.div>
     </div>

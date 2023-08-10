@@ -98,9 +98,9 @@ function ContactUs() {
           type="submit"
           value="Send"
           className=" bg-emerald-500 text-black font-semibold p-7 rounded-lg hover:bg-emerald-600 hover:text-white active:bg-white active:text-emerald-500 shadow-white lg:w-1/2 lg:self-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 1 }}
+          initial={{ opacity: 0, x:-100 }}
+          animate={{ opacity: 1, x:0 }}
+          transition={{ duration: 1, delay: 0.7 }}
           exit={{ opacity: 0, transition: { duration: 1 } }}
         />
       ) : null}
