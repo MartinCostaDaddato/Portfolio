@@ -9,7 +9,7 @@ function Me() {
   const [isCvOpen, setIsCvOpen] = useState(false);
 
   return (
-    <motion.div className="w-full h-full md:mt-20 lg:mt-40 flex flex-col md:flex-row justify-center items-center overflow-hidden">
+    <motion.div className="w-full h-full md:mt-20 lg:mt-40 pb-24 flex flex-col md:flex-row justify-center items-center overflow-hidden">
       <motion.div
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1.5, type: "spring" }}
@@ -43,7 +43,7 @@ function Me() {
             </motion.p>
 
             {isCvOpen ? (
-              <div className="absolute justify-start items-start flex flex-col mt-4 md:mt-8 gap-6 md:gap-8 text-white">
+              <div className="absolute justify-start items-start flex flex-col mt-4 md:mt-8 gap-6 md:gap-8 text-white ">
                 <AnimatePresence>
                   <motion.a
                     href={EngCV}

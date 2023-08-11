@@ -18,22 +18,7 @@ function Projects() {
       img: bagues,
       description:
         "This ecommerce was made in React + Tailwind and Firebase as backend database. The products are part of the Bagues Essences collection and is an internship project as it is the final project of the React Js course at Coderhouse, which got the highest grade.",
-    },
-    {
-      name: "Bagues Ecommerce",
-      link: "https://bagues-ecommerce-martin-costa-daddato.netlify.app/",
-      img: bagues,
-      description:
-        "This ecommerce was made in React + Tailwind and Firebase as backend database. The products are part of the Bagues Essences collection and is an internship project as it is the final project of the React Js course at Coderhouse, which got the highest grade.",
-    },
-    {
-      name: "Bagues Ecommerce",
-      link: "https://bagues-ecommerce-martin-costa-daddato.netlify.app/",
-      img: bagues,
-      description:
-        "This ecommerce was made in React + Tailwind and Firebase as backend database. The products are part of the Bagues Essences collection and is an internship project as it is the final project of the React Js course at Coderhouse, which got the highest grade.",
-    },
-    
+    }
     
   ];
 
@@ -46,7 +31,7 @@ function Projects() {
   };
 
   return (
-      <motion.div className=" w-full h-full flex flex-col items-center">
+      <motion.div className=" w-full h-full flex flex-col items-center ">
         <motion.p
           animate={{ scale: 1 }}
           initial={{ scale: 0 }}
