@@ -9,7 +9,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="m-0 p-0 flex flex-col justify-center w-full h-screen font-manrope text-white">
+      <div className="m-0 p-0 flex flex-col justify-center w-full h-full font-manrope text-white">
         <Navbar/>
         <div className="container mx-auto h-full flex-col items-center justify-center">
           <Routes location={location} key={location.pathname}>

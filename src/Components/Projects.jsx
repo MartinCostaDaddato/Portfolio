@@ -19,6 +19,22 @@ function Projects() {
       description:
         "This ecommerce was made in React + Tailwind and Firebase as backend database. The products are part of the Bagues Essences collection and is an internship project as it is the final project of the React Js course at Coderhouse, which got the highest grade.",
     },
+    {
+      name: "Bagues Ecommerce",
+      link: "https://bagues-ecommerce-martin-costa-daddato.netlify.app/",
+      img: bagues,
+      description:
+        "This ecommerce was made in React + Tailwind and Firebase as backend database. The products are part of the Bagues Essences collection and is an internship project as it is the final project of the React Js course at Coderhouse, which got the highest grade.",
+    },
+    {
+      name: "Bagues Ecommerce",
+      link: "https://bagues-ecommerce-martin-costa-daddato.netlify.app/",
+      img: bagues,
+      description:
+        "This ecommerce was made in React + Tailwind and Firebase as backend database. The products are part of the Bagues Essences collection and is an internship project as it is the final project of the React Js course at Coderhouse, which got the highest grade.",
+    },
+    
+    
   ];
 
   const [isOpen, setIsOpen] = useState(Array(projects.length).fill(false));
@@ -35,11 +51,11 @@ function Projects() {
           animate={{ scale: 1 }}
           initial={{ scale: 0 }}
           transition={{ duration: 1, type: "spring" }}
-          className="mt-10 text-3xl md:text-5xl font-bold"
+          className=" my-10 text-3xl md:text-5xl font-bold "
         >
           Projects
         </motion.p>
-        <div className="flex flex-col items-center justify-center lg:flex-row lg:items-start gap-12 mt-10 w-full">
+        <div className="flex flex-col items-center justify-center lg:flex-row lg:items-start lg:flex-wrap gap-12 w-full">
           {projects.map((item, index) => (
             <motion.div
               layout
@@ -66,7 +82,7 @@ function Projects() {
                   animate={{ opacity: 1 }}
                   initial={{ opacity: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="flex flex-col text-start mt-10  top-0 left-0 w-full"
+                  className="flex flex-col text-start mt-10  w-full"
                 >
                   <p className="text-sm">{item.description}</p>
                   <img src={item.img} className=" h-40 self-center mt-8" />
@@ -91,7 +107,7 @@ function Projects() {
             type: "spring",
             layout: { duration: 1, type: "spring" },
           }}
-          className="text-md md:text-xl mt-12 relative"
+          className="text-md md:text-xl mt-8 relative"
         >
           More projects coming soon... 👀
         </motion.p>
