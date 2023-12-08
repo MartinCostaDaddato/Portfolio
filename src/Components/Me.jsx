@@ -2,11 +2,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { useState } from "react";
 import me from "../assets/me.png";
-import { MdOutlineArrowOutward } from "react-icons/md";
 
 function Me() {
   const [isCvOpen, setIsCvOpen] = useState(false);
-  const [isCvHover, setIsCvHover] = useState(false);
 
   return (
     <motion.div className="w-full h-full md:mt-20 lg:mt-40 pb-24 flex flex-col md:flex-row justify-center items-center overflow-hidden">
