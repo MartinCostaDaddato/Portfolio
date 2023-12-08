@@ -2,11 +2,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { useState } from "react";
 import me from "../assets/me.png";
-import EngCV from "../assets/ENG Martin Costa Daddato React Developer.pdf";
-import EspCV from "../assets/ESP Martin Costa Daddato Desarrollador React.pdf";
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 function Me() {
   const [isCvOpen, setIsCvOpen] = useState(false);
+  const [isCvHover, setIsCvHover] = useState(false);
 
   return (
     <motion.div className="w-full h-full md:mt-20 lg:mt-40 pb-24 flex flex-col md:flex-row justify-center items-center overflow-hidden">
@@ -17,7 +17,8 @@ function Me() {
         className="w-full h-fit md:p-8 flex justify-center items-center md:items-start mt-8 md:mt-0 flex-col font-medium"
       >
         <h1 className="w-5/6 md:w-full text-white  md:-mt-0 text-center md:text-start mb-8 sm:mb-4 text-2xl  md:text-4xl">
-          <p className="opacity-80 mb-4">Hi! My name is</p> <b className="opacity-100">Martin Costa Daddato</b>
+          <p className="opacity-80 mb-4">Hi! My name is</p>{" "}
+          <b className="opacity-100">Martin Costa Daddato</b>
         </h1>
         <h2 className=" w-5/6 opacity-50 text-md text-justify text-sm md:text-lg tracking-tight">
           React Developer base on Mar del Plata, Buenos Aires, Argentina. <br />
@@ -39,29 +40,41 @@ function Me() {
                 setIsCvOpen(!isCvOpen);
               }}
             >
-              Download CV
+              View CV
             </motion.p>
 
             {isCvOpen ? (
-              <div className="absolute justify-start items-start flex flex-col mt-4 md:mt-8 gap-6 md:gap-8 text-white ">
+              <div className="absolute w-48 justify-start items-start flex flex-col mt-4 md:mt-8 gap-6 md:gap-8 text-white">
                 <AnimatePresence>
                   <motion.a
-                    href={EngCV}
-                    download="ENG CV Martin Costa D'addato"
-                    className="hover:underline underline-offset-8 "
+                    href="https://drive.google.com/file/d/1Y2cAaArnkN35QpFGxyip_9bbNVU23-nZ/view?usp=sharing"
+                    className="w-36 text-start hover:underline underline-offset-8"
                     initial={{ y: -20 }}
                     animate={{ y: 0 }}
                     transition={{ duration: 0.5, type: "spring" }}
+                    target="_blank"
+                    onHoverStart={() => {
+                      setIsCvHover(true);
+                    }}
+                    onHoverEnd={() => {
+                      setIsCvHover(false);
+                    }}
                   >
-                    English CV{" "}
+                    English CV
                   </motion.a>
                   <motion.a
-                    href={EspCV}
-                    download="ESP CV Martin Costa D'addato"
-                    className="hover:underline underline-offset-8 "
+                    href="https://drive.google.com/file/d/1YFdKxDfDCcXdhp7kTaDEFduJItCPA_Dy/view?usp=sharing"
+                    target="_blank"
+                    className="w-36 text-start hover:underline underline-offset-8 "
                     initial={{ y: -40 }}
                     animate={{ y: 0 }}
                     transition={{ duration: 0.5, type: "spring" }}
+                    onHoverStart={() => {
+                      setIsCvHover(true);
+                    }}
+                    onHoverEnd={() => {
+                      setIsCvHover(false);
+                    }}
                   >
                     Spanish CV
                   </motion.a>
