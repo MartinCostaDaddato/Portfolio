@@ -51,12 +51,6 @@ function Me() {
                     animate={{ y: 0 }}
                     transition={{ duration: 0.5, type: "spring" }}
                     target="_blank"
-                    onHoverStart={() => {
-                      setIsCvHover(true);
-                    }}
-                    onHoverEnd={() => {
-                      setIsCvHover(false);
-                    }}
                   >
                     English CV
                   </motion.a>
@@ -67,12 +61,6 @@ function Me() {
                     initial={{ y: -40 }}
                     animate={{ y: 0 }}
                     transition={{ duration: 0.5, type: "spring" }}
-                    onHoverStart={() => {
-                      setIsCvHover(true);
-                    }}
-                    onHoverEnd={() => {
-                      setIsCvHover(false);
-                    }}
                   >
                     Spanish CV
                   </motion.a>
