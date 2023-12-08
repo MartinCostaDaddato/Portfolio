@@ -28,7 +28,7 @@ function Me() {
           right and fast. <br />
           Always excited to learn and face new challenges in technology.
         </h2>
-        <div className="w-5/6 justify-between mt-4 md:mt-8 flex flex-row items-center">
+        <div className="w-5/6 justify-between mt-4 md:mt-8 flex flex-row items-center mb-16 md:mb-0">
           <motion.button className=" relative" layout>
             <motion.p
               layout="position"
