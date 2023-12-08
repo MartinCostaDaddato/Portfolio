@@ -12,6 +12,7 @@ function Projects() {
       img: argentv,
       description:
         "This app was built using Next.js 14, styled with Tailwind CSS, and animated with Framer Motion. The purpose of the app is to showcase all the television and radio stations in Argentina that stream for free on YouTube every day.",
+      delay: 0.3,
     },
     {
       name: "Pokemon Chat",
@@ -19,6 +20,7 @@ function Projects() {
       img: pk,
       description:
         "This app was made in React + Tailwindcss and the objective is to talk with your favorite pokemon. They will answer you by artificial intelligence thanks to the Open AI API (ChatGPT 3.5 Turbo) based on an initial promt of configuration.",
+      delay: 0.6,
     },
     {
       name: "Bagues Ecommerce",
@@ -26,6 +28,7 @@ function Projects() {
       img: bagues,
       description:
         "This ecommerce was made in React + Tailwind and Firebase as backend database. The products are part of the Bagues Essences collection and is an internship project as it is the final project of the React Js course at Coderhouse, which got the highest grade.",
+      delay: 0.9,
     },
   ];
 
@@ -55,9 +58,10 @@ function Projects() {
             animate={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 100 }}
             transition={{
-              layout: { duration: 0.5, type: "" },
+              layout: { duration: 0.5 },
               duration: 1,
               type: "spring",
+              delay: item.delay,
             }}
             className=" xl:w-1/3 p-7 border rounded-xl text-white hover:text-emerald-500 border-emerald-500 font-bold text-center relative w-full cursor-pointer"
             key={item.name}
@@ -92,7 +96,7 @@ function Projects() {
         animate={{ scale: 1, opacity: 1 }}
         initial={{ scale: 0, opacity: 0 }}
         transition={{
-          delay: 1.5,
+          delay: 2,
           type: "spring",
           layout: { duration: 1, type: "spring" },
         }}
