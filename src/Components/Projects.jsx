@@ -80,7 +80,7 @@ function Projects() {
                 <img src={item.img} className=" h-40 self-center mt-8" />
                 <motion.a
                   href={item.link}
-                  target="__BLANK"
+                  target="_blank"
                   className="self-center p-4 mt-8 border hover:border-emerald-500 hover:text-emerald-500"
                 >
                   View on browser
