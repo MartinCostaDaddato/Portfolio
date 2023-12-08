@@ -59,13 +59,10 @@ function Projects() {
               duration: 1,
               type: "spring",
             }}
-            className=" xl:w-1/3 p-7 border rounded-xl border-emerald-500 font-bold text-center relative w-full"
+            className=" xl:w-1/3 p-7 border rounded-xl text-white hover:text-emerald-500 border-emerald-500 font-bold text-center relative w-full cursor-pointer"
             key={item.name}
           >
-            <motion.h2
-              layout
-              className="text-white text-3xl hover:text-emerald-500"
-            >
+            <motion.h2 layout className="text-3xl">
               {item.name}
             </motion.h2>
             {isOpen[index] ? (
@@ -76,7 +73,7 @@ function Projects() {
                 transition={{ delay: 0.3 }}
                 className="flex flex-col text-start mt-10  w-full"
               >
-                <p className="text-sm">{item.description}</p>
+                <p className="text-sm text-white">{item.description}</p>
                 <img src={item.img} className=" h-40 self-center mt-8" />
                 <motion.a
                   href={item.link}
@@ -99,7 +96,7 @@ function Projects() {
           type: "spring",
           layout: { duration: 1, type: "spring" },
         }}
-        className="text-md md:text-xl mt-8 relative"
+        className="text-md md:text-xl py-8 relative"
       >
         More projects coming soon... 👀
       </motion.p>
