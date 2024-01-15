@@ -3,9 +3,17 @@ import { motion } from "framer-motion";
 import pk from "../assets/pk.png";
 import bagues from "../assets/bagues.png";
 import argentv from "../assets/argentv.png";
+import epidemicClone from "../assets/epidemicClone.png";
 
 function Projects() {
   const projects = [
+    {
+      name: "Epidemic Sound Clone",
+      link: "https://epidemic-by-mcd.vercel.app/",
+      img: epidemicClone,
+      description:
+        "This clone was made in Next.js 14 + Tailwindcss with the goal of replicating the UX / UI design as pixel perfect as possible. It is scratchbuilt and is 100% responsive like the original.",
+    },
     {
       name: "ArgenTV",
       link: "https://argentv.vercel.app/",
