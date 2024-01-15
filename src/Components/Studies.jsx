@@ -8,55 +8,56 @@ import {
 } from "react-icons/bi";
 import { FaCss3Alt } from "react-icons/fa6";
 import { BiLogoFirebase } from "react-icons/bi";
-import {PiFramerLogoFill} from "react-icons/pi"
+import { PiFramerLogoFill } from "react-icons/pi";
+import { SiNextdotjs } from "react-icons/si";
 
 function Studies() {
   const iconSize = 50;
   const stack = [
     {
+      name: "Next Js",
+      logo: <SiNextdotjs size={iconSize} />,
+      delay: 0.7,
+    },
+    {
       name: "React Js",
       logo: <FaReact size={iconSize} />,
-      delay: 0.5
+      delay: 0.5,
     },
     {
       name: "Tailwind CSS",
       logo: <BiLogoTailwindCss size={iconSize} />,
-      delay: 0.6
-    },
-    {
-      name: "Framer Motion",
-      logo: <PiFramerLogoFill size={iconSize}/>,
-      delay: .7
+      delay: 0.6,
     },
     {
       name: "Firebase",
       logo: <BiLogoFirebase size={iconSize} />,
-      delay: .8
+      delay: 0.8,
     },
     {
       name: "Git",
-      logo: <FaGit size={iconSize}/>,
-      delay: .9
+      logo: <FaGit size={iconSize} />,
+      delay: 0.9,
     },
     {
       name: "Github",
-      logo: <FaGithub size={iconSize}/>,
-      delay: 1
+      logo: <FaGithub size={iconSize} />,
+      delay: 1,
     },
     {
       name: "HTML 5",
       logo: <BiLogoHtml5 size={iconSize} />,
-      delay: 1.1
+      delay: 1.1,
     },
     {
       name: "CSS 3",
       logo: <BiLogoCss3 size={iconSize} />,
-      delay: 1.2
+      delay: 1.2,
     },
     {
       name: "Javascript",
       logo: <BiLogoJavascript size={iconSize} />,
-      delay: 1.3
+      delay: 1.3,
     },
   ];
   return (
@@ -229,8 +230,6 @@ function Studies() {
               <motion.p className="text-center">{item.name}</motion.p>
             </motion.div>
           ))}
-
-          
         </motion.div>
       </motion.div>
     </div>
